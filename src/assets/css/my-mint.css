@@ -1,0 +1,21 @@
+
+.mint-switch-core {
+    height: 5vw !important;
+    width: 7vw !important;
+}
+.mint-switch-label {
+    height: 5vw !important;
+    width: 7vw !important;
+}
+.mint-switch-core:before {
+    height: 4vw !important;
+    width: 4vw !important;
+}
+.mint-switch-core:after {
+    height: 4vw !important;
+    width: 4vw !important;
+}
+.mint-switch-input:checked + .mint-switch-core:after {
+    transform: translateX(4vw) !important;
+}
+
