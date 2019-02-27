@@ -90,7 +90,7 @@ export default {
     box-shadow: 0 0 9px #999;
     position: relative;
 
-    img {
+    img[lazy="loading"] {
       width: 100%;
       vertical-align: middle;
     }

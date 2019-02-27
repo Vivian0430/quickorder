@@ -4,7 +4,7 @@
             <div>
         <mt-swipe :auto="4000">
             <mt-swipe-item v-for="item in lunboList" :key="item.img">
-                <img :src="item.img" :alt="item.url">
+                <img v-lazy="item.img" :alt="item.url">
             </mt-swipe-item>
         </mt-swipe>
 
@@ -84,7 +84,7 @@ export default {
 <style lang="less" scoped>
 .mint-swipe {
   height: 200px;
-  img {
+  img[lazy="loading"] {
     width: 100%;
     height: 100%;
   }

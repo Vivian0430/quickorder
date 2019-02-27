@@ -1,18 +1,18 @@
 import Vue from "vue";
 import Router from "vue-router";
-import PizzaList from "@/components/home/PizzaList.vue";
-import IceList from "@/components/home/IceList.vue";
-import Detail from "@/components/home/Detail.vue";
-import FastList from "@/components/home/FastList.vue";
-import MainList from "@/components/home/MainList.vue";
-import HanList from "@/components/home/HanList.vue";
-import DrinkList from "@/components/home/DrinkList.vue";
-import Login from "@/components/common/login.vue";
-import Register from "@/components/common/register.vue";
-import Changepwd from "@/components/common/changepwd.vue";
-import Order from "@/components/common/order.vue";
-import UserInfo from "@/components/common/userinfo.vue";
-import EditInfo from "@/components/common/editinfo.vue";
+const PizzaList = () => import("@/components/home/PizzaList.vue");
+const IceList = () => import("@/components/home/IceList.vue");
+const Detail = () => import("@/components/home/Detail.vue");
+const FastList = () => import("@/components/home/FastList.vue");
+const MainList = () => import("@/components/home/MainList.vue");
+const HanList = () => import("@/components/home/HanList.vue");
+const DrinkList = () => import("@/components/home/DrinkList.vue");
+const Login = () => import("@/components/common/login.vue");
+const Register = () => import("@/components/common/register.vue");
+const Changepwd = () => import("@/components/common/changepwd.vue");
+const Order = () => import("@/components/common/order.vue");
+const UserInfo = () => import("@/components/common/userinfo.vue");
+const EditInfo = () => import("@/components/common/editinfo.vue");
 /*import store from "./store/store";
 import router from "./router";*/
 //路由懒加载

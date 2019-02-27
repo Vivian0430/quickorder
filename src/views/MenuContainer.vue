@@ -14,7 +14,7 @@
         <div class="mui-scroll-wrapper" style="display: inline;top: 7vh;left: 25vw;bottom:63px;width: 75vw;">
         <ul id="muiTable" class="mui-table-view">
             <li v-for="(item,index) in list" :key="item.id" class="mui-table-view-cell mui-media">
-                <router-link class="mui-media-object mui-pull-left" :to="'/home/detail/'+item.id" :src="rootPath+item.original_path" alt="" tag="img"></router-link>
+                <router-link class="mui-media-object mui-pull-left" :to="'/home/detail/'+item.id" v-lazy="rootPath+item.original_path" alt="" tag="img"></router-link>
                     <div class="info">
                         <h1 class="name">{{ item.name }}</h1>
                         <p>
@@ -145,7 +145,7 @@ export default {
         font-size: 14px;
       }
 
-      img {
+      img[lazy="loading"] {
         height: 11vh;
         width: 11vh;
         max-width: 11vh !important;

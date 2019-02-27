@@ -8,7 +8,7 @@
                 @after-enter="afterEnter">
             <div class="ball" v-show="ballFlag" ref="ball"></div>
         </transition>
-        <img :src="detail.img_url">
+        <img v-lazy="detail.img_url">
         <div class="mui-card">
             <div class="mui-card-header">{{ detail.name }}</div>
             <div class="mui-card-content">
@@ -111,7 +111,7 @@ export default {
 <style lang="less" scoped>
 .detail-container {
   padding: 0 4px;
-  img {
+  img[lazy="loading"] {
     width: 80%;
     height: 80%;
     position: relative;

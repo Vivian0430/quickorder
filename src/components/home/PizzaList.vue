@@ -3,7 +3,7 @@
         <ul class="mui-table-view">
             <li v-for="item in pizzaList" :key="item.id" class="mui-table-view-cell mui-media">
                 <router-link :to="'/home/detail/'+item.id">
-                    <img class="mui-media-object mui-pull-left" :src="item.img_url">
+                    <img class="mui-media-object mui-pull-left" v-lazy="item.img_url">
                     <div class="mui-media-body">
                         <h1 style="white-space:pre-wrap">{{ item.name }}</h1>
                         <p class='mui-ellipsis'>
@@ -48,7 +48,7 @@ export default {
       line-height: 5vh;
       font-size: 14px;
     }
-    img {
+    img[lazy="loading"] {
       height: 11vh;
       width: 11vh;
       max-width: 11vh !important;

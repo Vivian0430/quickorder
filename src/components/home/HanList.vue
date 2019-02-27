@@ -2,7 +2,7 @@
     <div class="mui-scroll-wrapper" style="top: 9vh;bottom: 8vh;">
     <div class="goods-list">
         <router-link :to="'/home/detail/'+item.id" v-for="item in goodslist" :key="item.id" class="goods-item">
-            <img :src="item.img_url" alt="">
+            <img v-lazy="item.img_url" alt="">
             <h1 class="title">{{ item.name }}</h1>
             <div class="info">
                 <p class="price">
@@ -77,7 +77,7 @@ export default {
     justify-content: space-between;
     min-height: 293px;
 
-    img {
+    img[lazy="loading"] {
       width: 100%;
     }
     .title {

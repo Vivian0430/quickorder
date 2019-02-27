@@ -13,7 +13,6 @@ import "./assets/css/my-mint.css";
 //引入mintui并注册组件
 import Mint from "mint-ui";
 Vue.use(Mint);
-import "jquery";
 
 import vueTap from "v-tap";
 Vue.use(vueTap);
